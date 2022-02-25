@@ -54,7 +54,7 @@ export default function Home() {
             <div className="flex justify-end">
               <Botao cor='green'
                 className="mb-4"
-                onClick={novoCliente}
+                onClick={() => novoCliente}
               >
               Novo Cliente</Botao>
             </div>
