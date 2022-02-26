@@ -40,6 +40,7 @@ export default function Home() {
   }
 
   function novoCliente(cliente: Cliente) {
+    console.log("Novo Cliente - Botão")
     setCliente(Cliente.vazio())
     setVisivel('form')
   }
