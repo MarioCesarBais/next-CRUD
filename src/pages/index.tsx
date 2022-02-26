@@ -15,6 +15,8 @@ export default function Home() {
   const [clientes, setClientes] = useState<Cliente[]>([])
   const [visivel, setVisivel] = useState<'tabela' | 'form'>('tabela')
 
+  console.log("Clientes: ", clientes)
+
   useEffect(obterTodos, [])
 
   function obterTodos() {
@@ -40,14 +42,15 @@ export default function Home() {
   }
 
   function novoCliente(cliente: Cliente) {
-    console.log("Novo Cliente - Botão")
+    console.log("Novo Cliente - Botão - cliquei de verdade")
     setCliente(Cliente.vazio())
     setVisivel('form')
+    console.log(setCliente, setVisivel)
   }
 
   return (
     <div className={
-      "flex h-screen items-center justify-center bg-gradient-to-r from-blue-600 to-purple-800 text-white"
+      "bg-gradient-to-r from-purple-600 to-blue-700 flex h-screen items-center justify-center text-white"
     }>
       <Layout titulo='Cadastro Simples'>
         {visivel === 'tabela' ?
@@ -55,7 +58,7 @@ export default function Home() {
             <div className="flex justify-end">
               <Botao cor='green'
                 className="mb-4"
-                onClick={() => novoCliente}
+                onClick={() => novoCliente(Cliente.vazio())}
               >
               Novo Cliente</Botao>
             </div>

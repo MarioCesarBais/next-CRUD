@@ -16,21 +16,21 @@ export default function Formulario(props: FormularioProps) {
     return (
         <div>
             {id ? (
-                <Entrada texto='Código' valor={id} somenteLeitura className="mt-10" />
+                <Entrada texto='Código' valor={id} somenteLeitura className="mt-10 mb-4" />
             ) : false}
             <Entrada texto='Nome' valor={nome} valorMudou={setNome} className='my-5'/>
-            <Entrada texto='Idade' tipo='number' valor={idade} valorMudou={setIdade} />
-        <div className="flex justify-end mt-7 space-x-5">
-            <Botao
-                cor='blue'
-                onClick={() => props.clienteMudou?.(new Cliente(nome, +idade, id))}    
-            >
-                {id ? 'Alterar' : 'Salvar'}
-            </Botao>
-            <Botao onClick={props.cancelado}>
-                Cancelar
-            </Botao>
-        </div>
+            <Entrada texto='Idade' tipo='number' valor={idade} valorMudou={setIdade} className='mb-4' />
+            <div className="flex justify-end mt-7 space-x-5">
+                <Botao
+                    cor='blue'
+                    onClick={() => props.clienteMudou?.(new Cliente(nome, +idade, id))}    
+                >
+                    {id ? 'Alterar' : 'Salvar'}
+                </Botao>
+                <Botao onClick={props.cancelado}>
+                    Cancelar
+                </Botao>
+            </div>
         </div>
     )
 }

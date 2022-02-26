@@ -12,7 +12,7 @@ export default function Botao(props: BotaoProps) {
         <button
             onClick={props.onClick}
             className=
-            {`text-white px-4 py-2 rounded-md bg-gradient-to-r from-${cor}-700 to-${cor}-500 font-bold`}>
+            {`bg-gradient-to-r from-green-700 to-green-500 text-white px-4 py-2 rounded-md font-bold ${props.className}`}>
             {props.children}
         </button>
     )

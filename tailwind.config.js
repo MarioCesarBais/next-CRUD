@@ -11,7 +11,7 @@ module.exports = {
     ]
   },
   
-  content: [],
+  // content: [],
   theme: {
     extend: {},
   },
