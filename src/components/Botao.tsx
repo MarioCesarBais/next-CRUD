@@ -7,7 +7,6 @@ interface BotaoProps {
 
 export default function Botao(props: BotaoProps) {
     const cor = props.cor ?? 'gray'
-    console.log('Apertei Botão', props)
     return (
         <button
             onClick={props.onClick}

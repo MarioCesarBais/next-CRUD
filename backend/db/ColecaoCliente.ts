@@ -53,7 +53,6 @@ export default class ColecaoCliente implements ClienteRepositorio {
   }
  
   async obterTodos(): Promise<Cliente[]> {
-    console.log('passei por obterTodos')
     const clientesCol = this.#colecaoCliente
     const clientesSnapshot = await getDocs(clientesCol)
     const clientesList = clientesSnapshot.docs.map((doc) => doc.data()) ?? []

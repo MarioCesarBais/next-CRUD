@@ -11,6 +11,5 @@ const firebaseConfig = {
 // Inicializando firebase
 const app = !getApps().length ? initializeApp( firebaseConfig ) : getApp()
 const dataBase = getFirestore(app);
-// console.log(dataBase)
  
 export { dataBase }
